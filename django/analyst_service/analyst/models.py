@@ -1,6 +1,8 @@
 from django.db import models
 
 
+
+
 class User(models.Model):
     name = models.TextField(verbose_name='Имя')
     address = models.TextField(verbose_name='адрес')
@@ -21,6 +23,9 @@ class Post(models.Model):
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'
 
+
+class Hashtag(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
 
 class Like(models.Model):
     date = models.DateTimeField(verbose_name='Дата', auto_now_add=True)
