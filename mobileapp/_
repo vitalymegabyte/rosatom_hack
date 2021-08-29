@@ -1,0 +1,13 @@
+
+
+ <Icon.Button
+    key={i.id }
+    name="heart-sharp" 
+    backgroundColor="#0d6ab0"
+    onPress={addlike}
+    
+  >
+
+  const addlike = (event) => {
+    console.log( );
+  }
