@@ -8,3 +8,6 @@
 2) Открыть https://expo.dev/@kurilov/num_workers_3
 
 P.S. с работой приложения на некоторых девайсах возникают проблемы
+
+## Аналитика
+`docker-compose run analytics` из корневой директории
