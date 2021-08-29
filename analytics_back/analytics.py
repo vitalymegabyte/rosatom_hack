@@ -14,13 +14,13 @@ transaction_class_list = ['Продукты', 'Еда', 'Инструменты'
 #parser.add_argument('input', metavar='N', type=str, nargs='+',
 #                    help='a string')
 #args = parser.parse_args()
+sbert = BertModel.from_pretrained('sberbank-ai/ruBert-base', output_attentions=False, output_hidden_states=False)
+sbert.eval()
+sbert_tokenizer = BertTokenizer.from_pretrained('sberbank-ai/ruBert-base')
 
 print('Что Вы хотите открыть?')
 input = input()
 
-sbert = BertModel.from_pretrained('sberbank-ai/ruBert-base', output_attentions=False, output_hidden_states=False)
-sbert.eval()
-sbert_tokenizer = BertTokenizer.from_pretrained('sberbank-ai/ruBert-base')
 
 def _sbert_get_vector(input_ids):
     embeddings = sbert(input_ids)
