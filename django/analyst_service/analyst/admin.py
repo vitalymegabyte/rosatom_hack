@@ -6,7 +6,7 @@ from .models import *
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('name', 'address', 'address_lng', 'gender', 'age')
+    list_display = ('name', 'address', 'latitude', 'longitude', 'gender', 'age')
 
 
 @admin.register(Post)
@@ -29,6 +29,9 @@ class HashtagAdmin(admin.ModelAdmin):
     list_display = ('id', 'post',)
 
 
+@admin.register(Realty)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ('id', 'sum', 'place', 'latitude', 'longitude', 'square')
 
 # @admin.register(Quotes)
 # class QuotesAdmin(admin.ModelAdmin):

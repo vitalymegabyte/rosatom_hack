@@ -20,6 +20,18 @@ class LikeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class RealtySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Realty
+        fields = '__all__'
+
+
+class HashSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Hashtag
+        fields = '__all__'
+
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
